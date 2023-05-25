@@ -1,0 +1,16 @@
+/*external style website
+지금은 한가지 property (color)가 있습니다.*/
+
+h1 {
+/* 제목의 색상을 초록색으로 바꿉니다.*/
+    color: green;
+    text-align: center /*마지막 curly braces 는 생략가능*/
+}
+
+body {
+    color: red;
+    height: 50vh;
+    background-color: #000;
+    background-image: url('background.jpg');
+    background-position: center center;
+}

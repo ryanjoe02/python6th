@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>My first Webpage</title>
+    </head>
+    <body>
+        <h1>Headings</h1>
+        <h1>welcome (h1)</h1>
+        <h2>welcome (h2)</h2>
+        <h3>welcome (h3)</h3>
+        <h4>welcome (h4)</h4>
+        <h5>welcome (h5)</h5>
+        <h6>welcome (h6)</h6>
+
+        <br />
+        <h1>Paragraph</h1>
+        <p>This is a paragraph</p>
+        <p>This is another <strong>paragraph</strong> of <i>text</i></p>
+
+        <br />
+        <h1>Links</h1>
+        <a href = "https://google.com" target="_blank">Link to Google</a>
+
+        <br />
+        <h1>Images</h1>
+        <img alt="explain this image" src="https://picsum.photos/200/300"/>
+
+        <br />
+        <h1>Lists</h1>
+        <ul>
+            <li>
+                <a href = "https://google.com" target="_blank">Link to Google</a>
+            </li>
+            <li>
+                <a href = "https://naver.com" target="_blank">Link to Naver</a>
+            </li>
+            <li>List Item</li>
+            <li>
+                <ul>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                    <li>List Item</li>
+                </ul>
+            </li>
+        </ul>
+        <ol>
+            <li>Ordered List Item</li>
+            <li>Ordered List Item</li>
+            <li>Ordered List Item</li>
+        </ol>
+
+        <br />
+        <h1>Tables</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SY</td>
+                    <td>Joe</td>
+                    <td>Joe@mail.com</td>
+                </tr>
+                <tr>
+                    <td>AA</td>
+                    <td>Ryan</td>
+                    <td>ryyan@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <br />
+        <h1>Registration Form</h1>
+        <form>
+            <fieldset>
+                <legend>Account</legend>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <br />
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <br />
+                <label for="password">PassWord</label>
+                <input type="password" id="password" name="password">
+            </fieldset>
+            <fieldset>
+                <legend>User Info</legend>
+                <label for="location">Address</label>
+                <select name="location" id="location">
+                    <option value="MA">Maiami</option>
+                    <option value="NY">NewYork</option>
+                    <option value="CA">California</option>
+                </select>
+                <br />
+                <h3>성별</h3>
+                <label for="gender1">Male</label>
+                <input type="radio" name="gender" id="gender1" value="Male">
+                <label for="gender2">Female</label>
+                <input type="radio" name="gender" id="gender2" value="Female">
+                <br />
+                <label for="gender11">Male</label>
+                <input type="checkbox" name="gender" id="gender11" value="Male">
+                <label for="gender22">Female</label>
+                <input type="checkbox" name="gender" id="gender22" value="Female">
+
+            </fieldset>
+            <input type="submit" value="registration">
+        </form>
+    </body>
+</html>
+

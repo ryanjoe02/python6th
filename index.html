@@ -9,7 +9,7 @@
      <!--internal style--->
     <style>
         h1 {
-            color: red;
+            color: black;
         }
     </style>
      <!--external style--->
@@ -18,7 +18,29 @@
 <body>
     <!--lnline style--->
     <h1>
-        Hello
+        Paddings
     </h1>
+<div id="container"> <!--id는 문서에서 유일한 값, div는 박스형으로 그려주는 역할을 한다. 문자들이 박스안에 있음-->
+
+    <div class="left-side">
+        <h1>환영합니다</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<!--            class는 여러번 사용가능합니다. span을 이용하여 css파일을 적용해서 글씨에 적용시켜주는 역할-->
+            <span class="highlight">강조된 텍스트입니다.</span> Nulla a mollis
+            lectus.
+        </p>
+    </div>
+
+    <div class="right-side">
+        <h1>안녕하세요</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <span class="highlight">강조된 텍스트입니다.</span> Nulla a mollis
+            lectus.
+        </p>
+    </div>
+    <!--<img src="background.jpg" alt="background.jpg">-->
+</div>
 </body>
 </html>

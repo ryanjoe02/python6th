@@ -1,3 +1,5 @@
-# python6th
+### Python 6th
 
-## HTML 5/25
+## HTML
+## CSS
+## JS

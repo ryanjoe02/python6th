@@ -1,10 +1,6 @@
-/*external style website
-지금은 한가지 property (color)가 있습니다.
-
 h1 {
-제목의 색상을 초록색으로 바꿉니다.
     color: green;
-    text-align: center 마지막 curly braces 는 생략가능
+    text-align: center /*마지막 semicolon 는 생략가능*/
 }
 
 body {
@@ -12,22 +8,25 @@ body {
     height: 50vh;
     background-color: #000;
     background-image: url('background.jpg');
+    /*The browser to center the background image both horizontally and vertically.*/
     background-position: center center;
 }
-*/
-body/*select라고 부른다.*/ {
+
+/*body : selector라고 부른다.
+  Selects all <body> elements*/
+body {
     background: #f4f4f4;
     font-family: arial, sans-serif;
     line-height: 1.5em; /*상대크기, 서로 줄간격이 살짝붙는다.*/
 
 }
-
+/*select the element with id="container" from HTML*/
 #container {
     border: 1px #cccccc solid;
     padding: 0 10px 0 10px; /*시계방향으로(from top to left) 나누어 준다*/
     width: 800px;
     margin: 30px auto; /*가로에만 오토가있다.*/
-                      /*세로는 오토를 줄 수 없다. 이유는 무한적으로 증식가능*/
+                       /*세로는 오토를 줄 수 없다. 이유는 무한으로 늘어나기 때문이다.*/
     overflow: hidden;
 }
 
@@ -37,14 +36,14 @@ body/*select라고 부른다.*/ {
     font-weight: bold;
     font-size: 30px;
 }
-/*float는 위에 아무것도 없으면 뜨고 위에 box가 있으면 그 밑에 차례로 적재된다.*/
+
+/*float는 위에 아무것도 없으면 뜨고 위에 box가 있으면 그 밑에 차례로 적재된다. (둥둥 떠다닌다는 느낌)*/
 .left-side{
     float: left;
     width: 50%;
-
 }
 
 .right-side {
-    /*float: right;
-    width: 50%;*/
+    float: right;
+    width: 50%;
 }

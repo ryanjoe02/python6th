@@ -26,7 +26,9 @@
         <img alt="explain this image" src="https://picsum.photos/200/300"/>
 
         <br />
+
         <h1>Lists</h1>
+<!--    An unordered list <ul> tag. Each list item starts with <li> tag    -->
         <ul>
             <li>
                 <a href = "https://google.com" target="_blank">Link to Google</a>
@@ -43,15 +45,18 @@
                 </ul>
             </li>
         </ul>
+<!--    An ordered list(1,2,3...) <ol> tag. Each list item starts with <li> tag    -->
         <ol>
             <li>Ordered List Item</li>
             <li>Ordered List Item</li>
             <li>Ordered List Item</li>
         </ol>
-
         <br />
+
         <h1>Tables</h1>
         <table>
+<!--        <th> tag : table header cells
+            <tr> tag : table row-->
             <thead>
                 <tr>
                     <th>First name</th>
@@ -59,6 +64,7 @@
                     <th>Email</th>
                 </tr>
             </thead>
+<!--        <td> tag : each table cells    -->
             <tbody>
                 <tr>
                     <td>SY</td>
@@ -72,11 +78,14 @@
                 </tr>
             </tbody>
         </table>
-        
         <br />
+
         <h1>Registration Form</h1>
+<!--    <form> element is a container for different types of input elements.-->
         <form>
+<!--        <fieldset> tag draw a box around the related elements.    -->
             <fieldset>
+<!--            <legend> tag : like a box name    -->
                 <legend>Account</legend>
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -87,26 +96,29 @@
                 <label for="password">PassWord</label>
                 <input type="password" id="password" name="password">
             </fieldset>
+
             <fieldset>
                 <legend>User Info</legend>
                 <label for="location">Address</label>
+<!--            <select> element is used to create a drop-down list    -->
                 <select name="location" id="location">
                     <option value="MA">Maiami</option>
                     <option value="NY">NewYork</option>
                     <option value="CA">California</option>
                 </select>
                 <br />
+
                 <h3>성별</h3>
                 <label for="gender1">Male</label>
                 <input type="radio" name="gender" id="gender1" value="Male">
                 <label for="gender2">Female</label>
                 <input type="radio" name="gender" id="gender2" value="Female">
                 <br />
+
                 <label for="gender11">Male</label>
                 <input type="checkbox" name="gender" id="gender11" value="Male">
                 <label for="gender22">Female</label>
                 <input type="checkbox" name="gender" id="gender22" value="Female">
-
             </fieldset>
             <input type="submit" value="registration">
         </form>

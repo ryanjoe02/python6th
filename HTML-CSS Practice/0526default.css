@@ -2,16 +2,17 @@ h1 {
     color: black;
 }
 /*5교시 2 수업------------------------------------------------------------------------*/
-/*p는 글씨를 포함하는 문단, article은 박스안에 포함된 문단 느낌*/
+/*<p> elements는 글씨를 포함하는 문단, article은 박스안에 포함된 문단 느낌*/
 article {
-    column-count: 3; /*3등분*/
-    column-gap: 40px;
-    column-rule: 1px solid coral;
+    column-count: 3;  /*3등분*/
+    column-gap: 40px; /*문장 사이의 간격*/
+    column-rule: 1px solid coral; /*coral : type of color*/
 }
 
 article h1 {
-    /*span : 셀 병합*/
     column-span: all;
+    /*column-span property : specifies how many columns an element should span across*/
+    /*제목이 article이랑 합쳐지지 않고 잘 배열된다*/
 }
 
 .textbox1 {
@@ -19,7 +20,7 @@ article h1 {
     padding: 20px;
     width: 300px;
     overflow: auto;
-    resize: both; /*horizontal , vertical*/
+    resize: both; /*I can also use horizontal , vertical*/
 }
 
 .textbox2 {
@@ -31,13 +32,14 @@ article h1 {
     outline: 1px solid red;
     outline-offset: 10px;
 }
-/*flex 좀 더 예쁘게 그릴 수 있다.*/
+/*makes it easier to design flexible responsive layout structure without using float or positioning.*/
 .flex-container {
     display: flex;
-    justify-content: speed-around;
+    justify-content: space-around;
+  /*This property is used to align the flex items. */
     width: 400px;
     height: 250px;
-    background: #000;
+    background-color: black;
 }
 
 .flex-item {
@@ -50,24 +52,29 @@ article h1 {
 .first {
     order: -1;
 }
+/*The order: -1 rule will cause elements with the .first class to be displayed before any other flex items
+  in the flex container.*/
 
 /*5교시 수업--------------------------------------------------------------------------*/
 /*# 은 id, .은 class*/
+
 /*box11번은 자동으로*/
 #box11 {
     width: 100px;
     height: 100px;
     background: #000; /*black*/
     transition: width 2s, height 4s;
+    transition-timing-function: linear;
     /*linear 일차함수 느낌으로 똑같은 시간으로 증가, 수축한다.
       ease-in-out : 수학적인 계산을 이용해서 가속도가 붙어서 증가, 수축한다.*/
-    transition-timing-function: linear;
 }
-/*마우스를 올리면 위 함수처럼 행동해주는데 최대크기는 이정도*/
+
+/*마우스를 올리면(hover) 위 함수처럼 행동해주는데 최대크기 설정*/
 #box11:hover {
     width: 300px;
     height: 300px;
 }
+
 /*box22번은 수동으로*/
 #box22 {
     width: 100px;
@@ -77,7 +84,8 @@ article h1 {
     animation-name: colorchange;
     animation-duration: 5s;
 }
-/*select에 keyframes를 추가*/
+
+/*selector에 keyframes를 추가*/
 @keyframes colorchange {
     /* 시계방향으로 돈다.*/
     0% {
@@ -116,12 +124,11 @@ h1.text1 {
     text-shadow: 2px 2px 5px red;
 }
 
-/*class 뒤에 붙혀쓰면 h1태그 중에 text1클래스를 가진 애만 가진다.*/
+/*class 뒤에 붙혀쓰면 h1태그 중에 text1클래스에만 영향을 미친다*/
 h1.text2 {
     color: #fff;
     text-shadow: 2px 2px 5px black;
-    /*글씨 기준으로 수평그림자 길이, 수직 그림자 길이, blurring
-      offset : 간격 */
+    /*text-shadow: 수평그림자 길이, 수직 그림자 길이, blurring, color; */
 }
 
 h1.text3 {
@@ -138,8 +145,7 @@ h1.text3 {
 .card {
     width: 250px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    /*a : 투명도를 줄 수 있다. 1은 불투명, 0은 투명, 이 함수는 그림자에 투명도(좀더 흰색)을
-          준 것이다.*/
+    /*rgba 중 a : 투명도를 줄 수 있다. 1은 불투명, 0은 투명, 그림자에 투명도 (좀더 흰색)을 준 것이다.*/
     text-align: center;
 }
 
@@ -157,8 +163,7 @@ h1.text3 {
 /*4교시 수업--------------------------------------------------------------------------*/
 #border-img {
     border: 10px solid;
-    /*
-      border: 10px 혼자 적은 거와 같은 의미이다.
+    /*border: 10px 는 width + style을 합친 의미
       border-width: 10px;
       border-style: 10px;*/
     padding: 10px;
@@ -240,7 +245,7 @@ a:hover {
     font-weight: bold;
 }
 
-/*클릭하는 "순간" 글자가 초록색으로 바뀐다. 그래서 active 라고한다.*/
+/*클릭하는 "순간"에만 글자가 초록색으로 바뀐다. active.*/
 a:active {
     color: green;
     font-weight: bold;
@@ -248,7 +253,7 @@ a:active {
 
 /*focus는 클릭할 때 active 된다.
   active는 클릭하는 순간만 active되고, focus는 user action을 기준으로 클릭하고 쭉 active된다.
-  anchor - active, input - focus를 주로 사용한다.*/
+  (anchor - active), (input - focus) 를 주로 사용한다.*/
 .myForm input:focus {
     background: pink;
     width: 300px;
@@ -285,7 +290,7 @@ a:active {
 /*1교시 수업--------------------------------------------------------------------------*/
 .wrapper {
     /*border가 사이즈(1)를 잡아먹기 떄문에 실제로는 602 402로 된다.*/
-    border: #000 1px dashed/*solid*/;
+    border: #000 1px dashed;
     width: 600px;
     height: 400px;
     position: relative; /*해당위치의 상대적인 위치를 잡아줘*/
@@ -298,9 +303,9 @@ a:active {
     border: #ff0000 1px solid;
     width: 200px;
     height: 100px;
-    /*모든 좌표계는 좌측 위상단이 (0,0)으로 시작한다.*/
-    position: absolute; /*브라우저 최상단에서 100px 떨어진 곳에 배치된다. 부보가(wrapper) position: relative
-    이면 자식(inside) 포지션이 absolute면, wrapper박스 맨 좌측 위 꼭지점이 (0,0)으로 시작된다.*/
+    /*모든 좌표계는 left top 이 (0,0)으로 시작한다.*/
+    position: absolute; /*브라우저 최상단에서 100px 떨어진 곳에 배치된다.
+    부모가(wrapper) position: relative이면 자식(inside) 포지션이 absolute면, wrapper박스 맨 좌측 위 꼭지점이 (0,0)으로 시작된다.*/
     /*position fixed: 브라우저에 액자처럼 고정했다고 생각하면된다. */
     top: 20px;
     left: 50px;

@@ -1,12 +1,17 @@
 <!doctype html>
 <html lang="ko">
 <head>
+<!--<meta> tag defines metadata about an HTML document. / always go inside the <head> element.
+    metadata is data (information) about data.-->
+<!--charset: attribute, value: UTF-8 / It specifics the character encoding for the HTML   -->
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>CSS 실습</title>
-     <!--internal style--->
+    <!--internal style
+        <style> tag is used to define style information(CSS) for a document.--->
     <style>
         h1 {
             color: black;
@@ -15,18 +20,22 @@
      <!--external style--->
     <link rel="stylesheet" href="0525default.css">
 </head>
+
 <body>
     <!--lnline style--->
     <h1>
         Paddings
     </h1>
-<div id="container"> <!--id는 문서에서 유일한 값, div는 박스형으로 그려주는 역할을 한다. 문자들이 박스안에 있음-->
-
+<!-- <div> tag is used as a container for HTML elements - which is then styled with CSS, JS.
+     div는 박스형으로 그려주는 역할을 한다. 문자들이 박스안에 있습니다.
+     The HTML id attribute is used to specify a unique id for an HTML element.-->
+<div id="container">
     <div class="left-side">
         <h1>환영합니다</h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-<!--            class는 여러번 사용가능합니다. span을 이용하여 css파일을 적용해서 글씨에 적용시켜주는 역할-->
+<!--        class는 여러번 사용가능합니다.
+            <span> tag is styled by CSS / spam tag is an lnline container used to mark part of a text, document.-->
             <span class="highlight">강조된 텍스트입니다.</span> Nulla a mollis
             lectus.
         </p>

@@ -1,0 +1,307 @@
+h1 {
+    color: black;
+}
+/*5교시 2 수업------------------------------------------------------------------------*/
+/*p는 글씨를 포함하는 문단, article은 박스안에 포함된 문단 느낌*/
+article {
+    column-count: 3; /*3등분*/
+    column-gap: 40px;
+    column-rule: 1px solid coral;
+}
+
+article h1 {
+    /*span : 셀 병합*/
+    column-span: all;
+}
+
+.textbox1 {
+    border: 2px solid;
+    padding: 20px;
+    width: 300px;
+    overflow: auto;
+    resize: both; /*horizontal , vertical*/
+}
+
+.textbox2 {
+    margin: 20px;
+    padding: 10px;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+    outline: 1px solid red;
+    outline-offset: 10px;
+}
+/*flex 좀 더 예쁘게 그릴 수 있다.*/
+.flex-container {
+    display: flex;
+    justify-content: speed-around;
+    width: 400px;
+    height: 250px;
+    background: #000;
+}
+
+.flex-item {
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.first {
+    order: -1;
+}
+
+/*5교시 수업--------------------------------------------------------------------------*/
+/*# 은 id, .은 class*/
+/*box11번은 자동으로*/
+#box11 {
+    width: 100px;
+    height: 100px;
+    background: #000; /*black*/
+    transition: width 2s, height 4s;
+    /*linear 일차함수 느낌으로 똑같은 시간으로 증가, 수축한다.
+      ease-in-out : 수학적인 계산을 이용해서 가속도가 붙어서 증가, 수축한다.*/
+    transition-timing-function: linear;
+}
+/*마우스를 올리면 위 함수처럼 행동해주는데 최대크기는 이정도*/
+#box11:hover {
+    width: 300px;
+    height: 300px;
+}
+/*box22번은 수동으로*/
+#box22 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: colorchange;
+    animation-duration: 5s;
+}
+/*select에 keyframes를 추가*/
+@keyframes colorchange {
+    /* 시계방향으로 돈다.*/
+    0% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0;
+    }
+
+    50% {
+        background-color: green;
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        background-color: blue;
+        left: 0;
+        top: 200px;
+    }
+
+    100% {
+        background-color: red;
+        left: 0;
+        top: 0;
+    }
+}
+
+/*4교시 2 수업------------------------------------------------------------------------*/
+h1.text1 {
+    text-shadow: 2px 2px 5px red;
+}
+
+/*class 뒤에 붙혀쓰면 h1태그 중에 text1클래스를 가진 애만 가진다.*/
+h1.text2 {
+    color: #fff;
+    text-shadow: 2px 2px 5px black;
+    /*글씨 기준으로 수평그림자 길이, 수직 그림자 길이, blurring
+      offset : 간격 */
+}
+
+h1.text3 {
+    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+}
+
+#box1 {
+    width: 300px;
+    height: 200px;
+    background-color: lightblue;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.card {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /*a : 투명도를 줄 수 있다. 1은 불투명, 0은 투명, 이 함수는 그림자에 투명도(좀더 흰색)을
+          준 것이다.*/
+    text-align: center;
+}
+
+.card-header {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px;
+    font-size: 40px;
+}
+
+.card-container {
+    padding: 10px;
+}
+
+/*4교시 수업--------------------------------------------------------------------------*/
+#border-img {
+    border: 10px solid;
+    /*
+      border: 10px 혼자 적은 거와 같은 의미이다.
+      border-width: 10px;
+      border-style: 10px;*/
+    padding: 10px;
+    border-image: url('border.png') 30 round;
+}
+
+#my-bg {
+    background-image: url('border.png'), url('background.jpg');
+    /*comma를 기준으로 parameter가 2개*/
+    background-position: left top, right bottom;
+    background-repeat: repeat, no-repeat;
+    padding: 20px;
+    background-size: 50px, 50px, cover;
+}
+
+/*gradient background 그리기*/
+#grad1 {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to right, red, yellow);
+}
+
+#grad2 {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(to right, pink, purple);
+}
+
+#grad3 {
+    width: 200px;
+    height: 50px;
+    background: radial-gradient(red, yellow, green);
+}
+
+#grad4 {
+    width: 200px;
+    height: 50px;
+    background: radial-gradient(circle,lightblue, darkblue);
+}
+
+/*3교시 수업--------------------------------------------------------------------------*/
+#rounded1 {
+    background: lightblue;
+    color: white;
+    width: 200px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+#rounded2 {
+    background: orange;
+    color: white;
+    width: 200px;
+    padding: 10px;
+    height: 140px;
+    border-radius: 30px;
+}
+
+#rounded3 {
+    background: pink;
+    color: white;
+    width: 200px;
+    padding: 10px;
+    height: 140px;
+    border-radius: 70px;
+}
+
+img {
+    width: 200px;
+    /*max를 쓰면 이미지가 찌그러 지지 않는다.*/
+    max-height: 300px;
+    border-radius: 50px;
+}
+
+/*2교시 수업--------------------------------------------------------------------------*/
+/*Anchor 태그, 마우스 위로 갖다 대면 색깔이 빨강으로 바뀐다.*/
+a:hover {
+    color: red;
+    font-weight: bold;
+}
+
+/*클릭하는 "순간" 글자가 초록색으로 바뀐다. 그래서 active 라고한다.*/
+a:active {
+    color: green;
+    font-weight: bold;
+}
+
+/*focus는 클릭할 때 active 된다.
+  active는 클릭하는 순간만 active되고, focus는 user action을 기준으로 클릭하고 쭉 active된다.
+  anchor - active, input - focus를 주로 사용한다.*/
+.myForm input:focus {
+    background: pink;
+    width: 300px;
+}
+
+/*되게 많이 사용하는 first, last함수입니다.*/
+.myList li:first-child {
+    color: green;
+    font-weight: bold;
+}
+
+.myList li:last-child {
+    color: red;
+    font-weight: bold;
+}
+
+/*n은 0부터 시작해서 그 index값 마다 색깔을 바꿔준다.*/
+.myList li:nth-child(3n+3){
+    color: orange;
+    font-weight bold;
+}
+
+/*even : 짝수, odd : 홀수 / 첫번째는 0이 아닌 1부터 시작해서 적용된다.*/
+.myList li:nth-child(even) {
+    background: yellow;
+    font-weight: bold;
+}
+
+.myList li:nth-child(odd) {
+    background: grey;
+    font-weight: bold;
+}
+
+/*1교시 수업--------------------------------------------------------------------------*/
+.wrapper {
+    /*border가 사이즈(1)를 잡아먹기 떄문에 실제로는 602 402로 된다.*/
+    border: #000 1px dashed/*solid*/;
+    width: 600px;
+    height: 400px;
+    position: relative; /*해당위치의 상대적인 위치를 잡아줘*/
+                        /*absolute는 브라우저의 절대적인 좌표계*/
+    left: 50px;
+    top: 100;
+}
+
+.inside {
+    border: #ff0000 1px solid;
+    width: 200px;
+    height: 100px;
+    /*모든 좌표계는 좌측 위상단이 (0,0)으로 시작한다.*/
+    position: absolute; /*브라우저 최상단에서 100px 떨어진 곳에 배치된다. 부보가(wrapper) position: relative
+    이면 자식(inside) 포지션이 absolute면, wrapper박스 맨 좌측 위 꼭지점이 (0,0)으로 시작된다.*/
+    /*position fixed: 브라우저에 액자처럼 고정했다고 생각하면된다. */
+    top: 20px;
+    left: 50px;
+}

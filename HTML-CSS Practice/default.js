@@ -37,12 +37,58 @@
 //
 //5교시 -----------------------------------------------------------------
 
-var name = "이승훈";
-var age = 29;
-var cgpa = 3.92;
-var lineBreak = "<br />";
+//var name = "이승훈";
+//var age = 29;
+//var cgpa = 3.92;
+//var lineBreak = "<br />";
+//
+//document.write("이름 " + name + lineBreak);
+//document.write("나이 " + age + lineBreak);
+//document.write("학점 " + cgpa + lineBreak);
+////앞에 "나이 "가 문자이기 때문에 age, cgpa가 문자로 변환되어서 뒤에 붙는다.
 
-document.write("이름 " + name + lineBreak);
-document.write("나이 " + age + lineBreak);
-document.write("학점 " + cgpa + lineBreak);
-//앞에 "나이 "가 문자이기 때문에 age, cgpa가 문자로 변환되어서 뒤에 붙는다.
+//var lastName = "홍";
+//var firstName = "길동";
+//
+//var fullName = lastName + firstName;
+//console.log(fullName);
+//console.log("Today is " + " a " + "beautiful day");
+//console.log("My name is " + fullName);
+//
+//var num1 = 20;
+//var num2 = 30;
+//var sum = num1 + num2;
+//console.log("" + num1 + num2);
+////먼저 ""문자와 num1의 숫자가 더해지면 앞에가 문자이기 때문에 string으로 된다. 출력결과 : 2030 (typecasting)
+//console.log(num1 + num2);
+//console.log(num1 + " + " + num2 + " = " + sum);
+
+//"asefaef" js는 문자열이 문자열로 저장되지 않고 객체(object) 로서 저장된다.
+//var text = prompt("Enter your name");
+//document.write("your name is " + text + "<br />");
+//
+//var len = text.length;
+////text라고 하는 문자열 객체가 여러가지 속성값을 가지고 있는데 그 중 length라는 property를 쓴다.
+//document.write("The number of characters is " + len + "<br />");
+//
+//document.write(text.charAt(2) + "<br />");
+////charAt 이러한 문자열을 camel case라고 부른다. charAt() 객체안에 있는 함수, method
+//
+//document.write(text.toUpperCase() + "<br />");
+//document.write(text.toLowerCase() + "<br />");
+//
+//var text1 = "hi, ";
+//var text2 = "bye";
+//var text3 = text1.concat(text2);
+//var text4 = text1 + text2;
+//document.write(text3 + "<br />");
+//document.write(text4 + "<br />");
+//
+//var text5 = "hello";
+//var result = text5.slice(0,2)
+////slice method, 첫번째로 받는 0(parameter) <= index < 2까지 출력
+//document.write(result + "<br />");
+
+//6교시 -----------------------------------------------------------------
+
+//OOP : 모든물건을 객제 (object)로 보는 시각

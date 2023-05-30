@@ -92,30 +92,59 @@
 //6교시 -----------------------------------------------------------------
 //OOP : 모든물건을 객제 (object)로 보는 시각
 
-var num = "20";
-num = num.toString();
-console.log(typeof num);
-
-var number = 20;
-console.log(typeof number);
-
-number = number.toString();
-console.log(number, typeof number);
-//아무 객체를 지정하지 않고도 함수 (toString) 를 사용할 수 있게 한다. JS의 특징이다.
-
-var x = 2.56789;
-console.log(x.toFixed(1), typeof x.toFixed(1));
-console.log(x.toFixed(2));
-//toFixed(1)은 둘째자리에서 반올림하여 첫째짜리까지 표현해주기.
-
-console.log(x.toPrecision(1), typeof x.toPrecision(1));
-console.log(x.toPrecision(2));
-//toPrecision(1) 은 첫째자리에서 반올림 한 숫자를 보여준다.
-//toPrecision() : method in JS formats a number to a specified length.
-
-console.log(Number(true));
-console.log(Number(false));
-console.log(Number(" 10 "));
-console.log(Number(" 10 "));
-console.log(Number("10.25"));
+//var num = "20";
+//num = num.toString();
+//console.log(typeof num);
 //
+//var number = 20;
+//console.log(typeof number);
+//
+//number = number.toString();
+//console.log(number, typeof number);
+////아무 객체를 지정하지 않고도 함수 (toString) 를 사용할 수 있게 한다. JS의 특징이다.
+//
+//var x = 2.56789;
+//console.log(x.toFixed(1), typeof x.toFixed(1));
+//console.log(x.toFixed(2));
+////toFixed(1)은 둘째자리에서 반올림하여 첫째짜리까지 표현해주기.
+//
+//console.log(x.toPrecision(1), typeof x.toPrecision(1));
+//console.log(x.toPrecision(2));
+////toPrecision(1) 은 첫째자리에서 반올림 한 숫자를 보여준다.
+////toPrecision() : method in JS formats a number to a specified length.
+//
+//console.log(Number(true));
+//console.log(Number(false));
+//console.log(Number(" 10 "));
+//console.log(Number(" 10 "));
+//console.log(Number("10.25"));
+//
+
+//var num1 = parseInt(prompt("Enter first number : "));
+////var input1 = prompt("Enter first number : ");
+////var num1 = parseInt(input1);
+
+//var num2 = parseInt(prompt("Enter second number : "));
+//var lineBreak = "<br />";
+//var result = num1 + num2;
+//document.write("The sum is : " + result + lineBreak);
+//
+//result = num1 - num2;
+//document.write("The subtraction is : " + result + lineBreak);
+//
+//result = num1 * num2;
+//document.write("The multiplication is " + result + lineBreak);
+//
+//result = num1 / num2;
+//document.write("The division is " + result + lineBreak);
+//
+//result = num1 % num2;
+//document.write("The remainder is " + result + lineBreak);
+
+var base = parseFloat(prompt("enter base : "));
+var height = parseFloat(prompt("enter perpendicular height : "));
+
+var area = base * height * 0.5;
+document.write("Area of a Triangle is : " + area);
+
+//7교시 -----------------------------------------------------------------

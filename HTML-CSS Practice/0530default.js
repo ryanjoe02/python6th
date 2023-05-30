@@ -63,7 +63,7 @@ console.log("" + num1 + num2);
 console.log(num1 + num2);
 console.log(num1 + " + " + num2 + " = " + sum);
 
-"asefaef" js는 문자열이 문자열로 저장되지 않고 객체(object) 로서 저장된다.
+//"asefaef" js는 문자열이 문자열로 저장되지 않고 객체(object) 로서 저장된다.
 var text = prompt("Enter your name");
 document.write("your name is " + text + "<br />");
 

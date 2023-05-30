@@ -13,26 +13,36 @@
 //var a = prompt('Welcome to JS program');
 //console.log(a);
 
-//data type -------------------------------------------------------------
-
-console.log(123, typeof 123);
-console.log( typeof 123.5);
-console.log(typeof "123");
-console.log(true, typeof true);
-console.log(typeof false);
-
-var car;
-//값도 undefined, typeof도 undefined.
-console.log(typeof car);
-
-var car = "";
-console.log(typeof car);
-
-var person = {firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue"};
-console.log(typeof person, person);
-
-ex = null;
-//빈 문자열: emptystring, 아무것도 넣지 않은 값: undefined, 값이 없다: null, NaN: 말이 안되는 값 (0으로 숫자를 나눈 결과)
-console.log(typeof ex, ex);
-
+////data type -------------------------------------------------------------
+//
+//console.log(123, typeof 123);
+//console.log( typeof 123.5);
+//console.log(typeof "123");
+//console.log(true, typeof true);
+//console.log(typeof false);
+//
+//var car;
+////값도 undefined, typeof도 undefined.
+//console.log(typeof car);
+//
+//var car = "";
+//console.log(typeof car);
+//
+//var person = {firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue"};
+//console.log(typeof person, person);
+//
+//empty = null;
+////빈 문자열: emptystring, 아무것도 넣지 않은 값: undefined, 값이 없다: null, NaN: 말이 안되는 값 (0으로 숫자를 나눈 결과)
+//console.log(typeof empty, empty);
+//
 //5교시 -----------------------------------------------------------------
+
+var name = "이승훈";
+var age = 29;
+var cgpa = 3.92;
+var lineBreak = "<br />";
+
+document.write("이름 " + name + lineBreak);
+document.write("나이 " + age + lineBreak);
+document.write("학점 " + cgpa + lineBreak);
+//앞에 "나이 "가 문자이기 때문에 age, cgpa가 문자로 변환되어서 뒤에 붙는다.

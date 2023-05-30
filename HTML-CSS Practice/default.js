@@ -90,5 +90,32 @@
 //document.write(result + "<br />");
 
 //6교시 -----------------------------------------------------------------
-
 //OOP : 모든물건을 객제 (object)로 보는 시각
+
+var num = "20";
+num = num.toString();
+console.log(typeof num);
+
+var number = 20;
+console.log(typeof number);
+
+number = number.toString();
+console.log(number, typeof number);
+//아무 객체를 지정하지 않고도 함수 (toString) 를 사용할 수 있게 한다. JS의 특징이다.
+
+var x = 2.56789;
+console.log(x.toFixed(1), typeof x.toFixed(1));
+console.log(x.toFixed(2));
+//toFixed(1)은 둘째자리에서 반올림하여 첫째짜리까지 표현해주기.
+
+console.log(x.toPrecision(1), typeof x.toPrecision(1));
+console.log(x.toPrecision(2));
+//toPrecision(1) 은 첫째자리에서 반올림 한 숫자를 보여준다.
+//toPrecision() : method in JS formats a number to a specified length.
+
+console.log(Number(true));
+console.log(Number(false));
+console.log(Number(" 10 "));
+console.log(Number(" 10 "));
+console.log(Number("10.25"));
+//

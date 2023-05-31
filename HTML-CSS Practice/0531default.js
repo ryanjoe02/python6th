@@ -62,40 +62,110 @@
 //    console.log("Consonant");
 //}
 
-var digit = parseInt(prompt("Enter a digit : "));
+//var digit = parseInt(prompt("Enter a digit : "));
+//
+//switch (digit) {
+//    case 0:
+//        document.write("Zero");
+//        break;
+//    case 1:
+//    case 2:
+//    case 3:
+//        document.write("123 all number");
+//        break;
+//    case 4:
+//        document.write("Four");
+//        break;
+//    case 5:
+//        document.write("Five");
+//        break;
+//    case 6:
+//        document.write("Six");
+//        break;
+//    case 7:
+//        document.write("Seven");
+//        break;
+//    case 8:
+//        document.write("Eight");
+//        break;
+//    case 9:
+//        document.write("Nine");
+//        break;
+//    default:
+//        document.write("Not a digit");
+//        break;
+//}
 
-switch (digit) {
-    case 0:
-        document.write("Zero");
+//var i = 1;
+//
+//do {
+//    document.write("멋쟁이사자 : ", i++ + "<br />");
+//} while (i <= 10)
+//
+//document.write("================<br />");
+//
+//var j = 1;
+//while (j <= 10) {
+//    document.write("멋쟁이사자 : ", j++ + "<br />");
+//}
+
+////break와 continue 이해하기
+
+for (var i = 1; i <= 100; i++) {
+    if (i == 20) {
         break;
-    case 1:
-    case 2:
-    case 3:
-        document.write("123 all number");
-        break;
-    case 4:
-        document.write("Four");
-        break;
-    case 5:
-        document.write("Five");
-        break;
-    case 6:
-        document.write("Six");
-        break;
-    case 7:
-        document.write("Seven");
-        break;
-    case 8:
-        document.write("Eight");
-        break;
-    case 9:
-        document.write("Nine");
-        break;
-    default:
-        document.write("Not a digit");
-        break;
+    }
+    document.write(i + "<br />");
 }
 
-//4교시 --------------------------------------------------------------
+document.write("===========<br />");
 
-//5교시 --------------------------------------------------------------
+for (var j = 1; j <= 100; j++) {
+    if (j == 20) {
+        continue;
+    }
+    document.write(j + "<br />");
+}
+
+
+
+////4교시 --------------------------------------------------------------
+
+////5교시 --------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

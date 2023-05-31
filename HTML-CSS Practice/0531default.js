@@ -156,19 +156,56 @@
 
 //// self-invoking function / 뒤에 ()로 묶고 parameter를 삽입
 
-(function display(message) {
-    console.log(message);
-})('Joe');
+//(function display(message) {
+//    console.log(message);
+//})('Joe');
+//
+//var display = function displayMessage(msg) {
+//    console.log(msg);
+//}
+//
+//display("I am message");
+//
+//(function addNumber(a, b) {
+//    console.log(a + b);
+//})(3, 4);
 
-var display = function displayMessage(msg) {
-    console.log(msg);
-}
 
-display("I am message");
+// new?
+var names = new Array(20);
 
-(function addNumber(a, b) {
-    console.log(a + b);
-})(3, 4);
+names[0] = "지훈";
+names[1] = "은영";
+
+console.log(names[0])
+
+//값을 가진 배열 생성
+var students = ["지훈", "은영", "수진", "준호"];
+console.log("Students = " + students);
+console.log("index 2 = " + students[2]);
+console.log("index 3 = " + students[3]);
+
+//배열의 길이 찾기
+console.log("The length : " + students.length);
+
+students.push("정만");
+console.log("push 후 학생 배열 : " + students);
+
+//Array elements(요소) 삭제하기
+//pop() function은 마지막 elements(요소)를 제거한다.
+//splice()
+students.pop();
+console.log("pop 후 학생 배열 : " + students);
+console.log("그리고 마지막 학생은 : " + students.pop());
+
+//배열 연결하기
+var numArray1 = [10, 20];
+var numArray2 = [30, 40, 50];
+var numArray = numArray1.concat(numArray2);
+
+console.log("배열 이어주기(concatenation) : " + numArray);
+
+console.log(numArray1 + numArray2);
 
 ////5교시 --------------------------------------------------------------
 

@@ -130,32 +130,45 @@
 ////4교시 --------------------------------------------------------------
 
 //parameter 가 없는 함수 생성
-function message(){
-    document.write("Hello, I am a function without parameter <br/>");
+//function message(){
+//    document.write("Hello, I am a function without parameter <br/>");
+//}
+//
+//// parameter를 가진 함수 생성
+//function welcomeMessage(name) {
+//    document.write("Weclome " + name + "." + "<br />");
+//}
+//
+//function addition(num1, num2) {
+//    var sum = num1 + num2;
+//    document.write("Addition is " + sum + "<br />");
+//}
+//
+////값을 반환하는 (return) 함수 생성
+//function square(num) {
+//    return (num * num);
+//}
+//
+//message();
+//welcomeMessage("Joe");
+//addition(2,3);
+//document.write("The square of 5 is " + square(5) + "<br />");
+
+//// self-invoking function / 뒤에 ()로 묶고 parameter를 삽입
+
+(function display(message) {
+    console.log(message);
+})('Joe');
+
+var display = function displayMessage(msg) {
+    console.log(msg);
 }
 
-// parameter를 가진 함수 생성
-function welcomeMessage(name) {
-    document.write("Weclome " + name + "." + "<br />");
-}
+display("I am message");
 
-function addition(num1, num2) {
-    var sum = num1 + num2;
-    document.write("Addition is " + sum + "<br />");
-}
-
-//값을 반환하는 (return) 함수 생성
-function square(num) {
-    return (num * num);
-}
-
-message();
-welcomeMessage("Joe");
-addition(2,3);
-document.write("The square of 5 is " + square(5) + "<br />");
-
-
-
+(function addNumber(a, b) {
+    console.log(a + b);
+})(3, 4);
 
 ////5교시 --------------------------------------------------------------
 

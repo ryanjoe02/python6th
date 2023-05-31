@@ -171,46 +171,70 @@
 //})(3, 4);
 
 
-// new?
-var names = new Array(20);
-
-names[0] = "지훈";
-names[1] = "은영";
-
-console.log(names[0])
-
-//값을 가진 배열 생성
-var students = ["지훈", "은영", "수진", "준호"];
-console.log("Students = " + students);
-console.log("index 2 = " + students[2]);
-console.log("index 3 = " + students[3]);
-
-//배열의 길이 찾기
-console.log("The length : " + students.length);
-
-students.push("정만");
-console.log("push 후 학생 배열 : " + students);
-
-//Array elements(요소) 삭제하기
-//pop() function은 마지막 elements(요소)를 제거한다.
-//splice()
-students.pop();
-console.log("pop 후 학생 배열 : " + students);
-console.log("그리고 마지막 학생은 : " + students.pop());
-
-//배열 연결하기
-var numArray1 = [10, 20];
-var numArray2 = [30, 40, 50];
-var numArray = numArray1.concat(numArray2);
-
-console.log("배열 이어주기(concatenation) : " + numArray);
-
-console.log(numArray1 + numArray2);
+//// new?
+//var names = new Array(20);
+//
+//names[0] = "지훈";
+//names[1] = "은영";
+//
+//console.log(names[0])
+//
+////값을 가진 배열 생성
+//var students = ["지훈", "은영", "수진", "준호"];
+//console.log("Students = " + students);
+//console.log("index 2 = " + students[2]);
+//console.log("index 3 = " + students[3]);
+//
+////배열의 길이 찾기
+//console.log("The length : " + students.length);
+//
+//students.push("정만");
+//console.log("push 후 학생 배열 : " + students);
+//
+////Array elements(요소) 삭제하기
+////pop() function은 마지막 elements(요소)를 제거한다.
+////splice()
+//students.pop();
+//console.log("pop 후 학생 배열 : " + students);
+//console.log("그리고 마지막 학생은 : " + students.pop());
+//
+////배열 연결하기
+//var numArray1 = [10, 20];
+//var numArray2 = [30, 40, 50];
+//var numArray = numArray1.concat(numArray2);
+//
+//console.log("배열 이어주기(concatenation) : " + numArray);
+//
+//console.log(numArray1 + numArray2);
 
 ////5교시 --------------------------------------------------------------
 
+//생성되는 시간은 컴퓨터의 시간
+var date = new Date();
+console.log(date);
 
+var year = date.getFullYear();
 
+console.log(year);
+
+var month = date.getMonth();
+console.log(month);
+
+var currentDate = date.getDate();
+console.log(currentDate);
+
+//요일 정보 받기, 수요일이면 3이 출력된다.
+var currentDay = date.getDay();
+console.log(currentDay);
+
+var currentHour = date.getHours();
+console.log(currentHour);
+
+var currentMinutes = date.getMinutes();
+console.log(currentMinutes);
+
+//1970년 1월 1일 부터 시작해서 계속 시간이 증가하고 있다
+console.log('getTime : ', + date.getTime());
 
 
 

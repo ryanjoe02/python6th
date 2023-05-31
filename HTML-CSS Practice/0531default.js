@@ -111,25 +111,51 @@
 
 ////break와 continue 이해하기
 
-for (var i = 1; i <= 100; i++) {
-    if (i == 20) {
-        break;
-    }
-    document.write(i + "<br />");
-}
-
-document.write("===========<br />");
-
-for (var j = 1; j <= 100; j++) {
-    if (j == 20) {
-        continue;
-    }
-    document.write(j + "<br />");
-}
-
-
+//for (var i = 1; i <= 100; i++) {
+//    if (i == 20) {
+//        break;
+//    }
+//    document.write(i + "<br />");
+//}
+//
+//document.write("===========<br />");
+//
+//for (var j = 1; j <= 100; j++) {
+//    if (j == 20) {
+//        continue;
+//    }
+//    document.write(j + "<br />");
+//}
 
 ////4교시 --------------------------------------------------------------
+
+//parameter 가 없는 함수 생성
+function message(){
+    document.write("Hello, I am a function without parameter <br/>");
+}
+
+// parameter를 가진 함수 생성
+function welcomeMessage(name) {
+    document.write("Weclome " + name + "." + "<br />");
+}
+
+function addition(num1, num2) {
+    var sum = num1 + num2;
+    document.write("Addition is " + sum + "<br />");
+}
+
+//값을 반환하는 (return) 함수 생성
+function square(num) {
+    return (num * num);
+}
+
+message();
+welcomeMessage("Joe");
+addition(2,3);
+document.write("The square of 5 is " + square(5) + "<br />");
+
+
+
 
 ////5교시 --------------------------------------------------------------
 

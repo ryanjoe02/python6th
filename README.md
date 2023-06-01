@@ -69,3 +69,8 @@
             const myCar = new Car(2023, "Tesla", "Model 3");
             
         Created a new object and assigns it to the variable ```myCar```. This object whill have the ```values``` (2023, Tesla, Model 3).
+
+
+## 06월 01일
+
+- Bootstrip

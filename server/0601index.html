@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap practice</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
-    <h1>안녕하세요 부트스트랩 5!</h1>
-    <!--row column 이 순서로 작성을 한다. -->
-    <div class="container">
+    <!-- <div class="container">
         <div class="row">
-            <!--12를 기준으로 화면을 분활한다. 현재 4 4 4 이므로 똑같이 3등분으로 나눠진다. 만약 세 합이 12를 넘으면 다음줄로 넘어간다. (부트스트랩 비율)-->
-            <!-- md 은 786px 보다 커지면 적용되고, sm은 576px 까지 적용된다.-->
-            <div class="col-md-4 col-sm-6" style="background-color: lightblue">
+            <!-- 12를 기준으로 화면을 분활한다. 현재 4 4 4 이므로 똑같이 3등분으로 나눠진다. 만약 세 합이 12를 넘으면 다음줄로 넘어간다. (부트스트랩 비율)
+            md 은 786px 보다 커지면 적용되고, sm은 576px 까지 적용한다. -->
+            <!--- <div class="col-md-4 col-sm-6" style="background-color: lightblue">
                 first column
             </div>
             <div class="col-md-4 col-sm-6" style="background-color: lightgreen">
@@ -24,6 +23,41 @@
                 third column
             </div>
         </div>
+    </div> -->
+    <!--브라우저 창을 줄이고 늘릴 때마다 버튼생성 실습 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a href="#" class="navbar-brand">Navbar</a>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Alert Practice -->
+    <div class="container mt-4">
+        <!-- mt : margin top -->
+        <div class="alert alert-success" role="alert">
+            A simple success alert-check it out!
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>

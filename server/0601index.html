@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+    <h1>안녕하세요 부트스트랩 5!</h1>
+    <!--row column 이 순서로 작성을 한다. -->
+    <div class="container">
+        <div class="row">
+            <!--12를 기준으로 화면을 분활한다. 현재 4 4 4 이므로 똑같이 3등분으로 나눠진다. 만약 세 합이 12를 넘으면 다음줄로 넘어간다. (부트스트랩 비율)-->
+            <!-- md 은 786px 보다 커지면 적용되고, sm은 576px 까지 적용된다.-->
+            <div class="col-md-4 col-sm-6" style="background-color: lightblue">
+                first column
+            </div>
+            <div class="col-md-4 col-sm-6" style="background-color: lightgreen">
+                second column
+            </div>
+            <div class="col-md-4 col-sm-12" style="background-color: lightyellow">
+                third column
+            </div>
+        </div>
+    </div>
+</body>
+</html>

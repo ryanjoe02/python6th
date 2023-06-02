@@ -29,8 +29,8 @@ console.log(num2 == num3, num2, "==", num3);
 console.log('num1 > num2 && num1 < num5 : ', num1 > num2 && num1 < num5);
 console.log('num1 > num2 || num1 < num5 : ', num1 > num2 || num1 < num5);
 
-var num1 = parseInt(prompt('첫번째 숫자 임력 : '));
-var num2 = parseInt(prompt('두번째 숫자 임력 : '));
+var num1 = parseInt(prompt('첫번째 숫자 입력 : '));
+var num2 = parseInt(prompt('두번째 숫자 입력 : '));
 
 if (num1 > num2) {
    console.log("큰 수는 num1 : ", + num1);

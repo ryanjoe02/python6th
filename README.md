@@ -202,4 +202,4 @@
     ```
     Explicit type conversion is when you ```manually convert``` a value from one data type to another using a built-in function.
 
-- 
+## 6월 7일, 8일, 9일

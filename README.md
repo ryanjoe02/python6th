@@ -51,10 +51,10 @@
     - Check if number is even or odd
     
             def is_even(number):
-                return number & 1 == 0
+                return number & 1 == 0 //True
 
             def is_odd(number):
-                return numb`er & 1 == 1
+                return number & 1 == 1 //True
     
         check if the last bit of the number is 0 or 1 because the last bit of an odd number is always 1. (even number is always 0)
 

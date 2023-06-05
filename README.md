@@ -1,4 +1,4 @@
-### Python 6th
+# Python 6th
 
 ## 5월 26일
 
@@ -182,3 +182,7 @@
 
     - The binding of this : this와 this가 가리키는 객체를 ```binding```하는 것이다
 
+
+## 6월 5일
+
+    

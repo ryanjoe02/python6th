@@ -61,7 +61,7 @@ print(f"b : {hex(b)}")
 print(f"~a : {~a} and {bin(~a)}")
 print(f"a<<2 {a<<2} and {bin(a<<2)}")
 
-#멤버 in 연산자
+#membership operators
 st1 = "welcome to likelion"
 
 print("to" in st1)
@@ -71,5 +71,15 @@ st2 = "welcome top likelion"
 
 print("to" in st2)
 print("oo" not in st2)
+
+# is operator
+a = 10
+b = 10
+
+print(f"is operator : {a is b}")
+
+b = '10'
+print(a is b)
+print(a is not b)
 
 

@@ -185,4 +185,21 @@
 
 ## 6월 5일
 
-    
+- Implicit
+
+    ```
+    a = 1
+    b = 2.0
+    c = a + b #c = 3.0
+    ```
+    For example, if you add an integer and a float together, the Python interpreter will ```automatically convert``` the integer to a float before performing the addition.
+
+- Explicit
+
+    ```
+    a = "123"
+    b = int(a) #b = 123
+    ```
+    Explicit type conversion is when you ```manually convert``` a value from one data type to another using a built-in function.
+
+- 

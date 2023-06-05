@@ -82,41 +82,9 @@ b = '10'
 print(a is b)
 print(a is not b)
 
-# implicit : 내 "의도대로"가 아닌 컴퓨터가 정한 규칙에 의해 결과가 나온다.
-# implicit type conversion
-a = 5
-b = 2
+# Input and Print
+print() # /n만 출력된다 (default)
+print("2", end='') #줄바꿈 대신에 아무것도 출력하지 않는다
 
-print(b, type(b))
-value = a / b
-print(f"{value} and {type(value)}")
-
-# explicit : 내 의도대로 (자료형이) 변형되어 결과가 나온다.
-# explicit type conversion
-j = "hello"
-k = "like lion"
-
-p = j + k
-print(f"{p} and {type(p)}")
-
-#q = 20
-#u = '10'
-#r = q + u 
-#explicit 적으로 계산시도 했지만 type이 맞지 않아서 error를 반환함
-
-# example of type conversion
-a = 5
-b = 2
-value = a / b
-
-int_value = int(value)
-# This is called : implicit type conversion
-
-q = 20
-u = '10'
-
-print(type(u))
-r = q + int(u)
-# + 기호는 앞에 문자를 concatenation해주는 함수를 호출
-print(f"r is {r} and {type(r)}")
-
+# input and print
+print()

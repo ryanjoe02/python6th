@@ -1,3 +1,5 @@
+from MyApp.Handlers.text_handler import handle_text
+
 class Car:
     # class 속성 (모든 자동차의 바퀴는 4로 지정한다)
     wheels = 4
@@ -42,3 +44,27 @@ my_car = Car("Toyota", "Corolla", 2009)
 
 # method 호출
 print(my_car.start_engine())
+
+# 다중상속
+class Engine:
+    def start(self):
+        return "Engine started"
+    def stop(self):
+        return "Engine stopped"
+
+class Wheels:
+    def rotate(self):
+        return "Wheels are rotating"
+
+class Car(Engine, Wheels):
+    pass
+
+# instance 생성
+my_car = Car()
+
+print(my_car.start())
+print(my_car.rotate())
+
+# package practice / Added header line 1
+input_text = "python package practice"
+handle_text(input_text)

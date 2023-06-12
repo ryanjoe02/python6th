@@ -190,7 +190,7 @@
     ```
     a = 1
     b = 2.0
-    c = a + b #c = 3.0
+    c = a + b #Output : 3.0
     ```
     For example, if you add an integer and a float together, the Python interpreter will ```automatically convert``` the integer to a float before performing the addition.
 
@@ -198,8 +198,57 @@
 
     ```
     a = "123"
-    b = int(a) #b = 123
+    b = int(a) #Output : 123
     ```
     Explicit type conversion is when you ```manually convert``` a value from one data type to another using a built-in function.
 
-## 6월 7일, 8일, 9일
+## Python OOP
+
+- self
+
+    ```self``` must be provided as a first parameter to the instance method and constructor. If not, It will cause an error.
+
+
+- Overloading
+
+    multiple functions can have the same name with different parameters.
+
+    ```
+    int     myFunction(int x)
+    float   myFunction(float x)
+    double  myFunction(double x, double y)
+  ```
+
+- Overriding
+
+    The specific implementation of the method that is already provided by the parent class is provided
+    by the child class. (```Inheritance``` always required)
+    ```
+    class A:
+        def fun1(self):
+            print('feature_1 of class A')
+  
+    class B(A):
+        def fun1(self):
+            print('Modified feature_1 of class A by class B')
+    
+    obj = B()
+    obj.fun1() #Output: Modified feature_1 of class A by class B
+  ```
+
+- Lambda
+
+    ```
+    #expression
+  
+    lambda arguments : expression
+    filter(function, iterable(list)) 
+  
+    numbers = [1,2,3,4,5]
+    even_numbers = filter(lambda n: n % 2 == 0, numbers)
+    print(even_numbers) #Output: [2,4]
+  ```
+    one-line functions, easy to read and understand
+
+    you don't need to define the function explicitly
+

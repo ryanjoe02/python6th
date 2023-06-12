@@ -68,3 +68,25 @@ print(my_car.rotate())
 # package practice / Added header line 1
 input_text = "python package practice"
 handle_text(input_text)
+
+# try - except
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Error : Division by zero")
+
+print("Program continues.")
+
+try:
+    number = int("Not a number")
+except ValueError:
+    print("value error")
+except TypeError:
+    print("type error")
+
+try:
+    number = 5 + "Not a number"
+except ValueError:
+    print("value error")
+except TypeError:
+    print("type error")

@@ -91,7 +91,7 @@ except ValueError:
 except TypeError:
     print("type error")
 
-#
+# custom exception
 class CustomException(Exception):
     def __init__(self, message):
         self.message = message
@@ -100,3 +100,20 @@ try:
     raise CustomException("This is a custom exception.")
 except CustomException as e:
     print(f"Error : {e.message}")
+
+# enumerate()
+a = ['a1', 'b2', 'c3']
+
+# index와 함께 출력하기
+for i in range(len(a)): # range(len(a) = 3) -> 0 1 2
+    print(i, a[i])
+print("---")
+
+i = 0
+for v in a:
+    print(i, v)
+    i += 1
+print("---")
+
+for i, v in enumerate(a):
+    print(i, v)

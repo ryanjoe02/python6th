@@ -23,3 +23,22 @@ print(my_car.make)
 print(my_car.drive())
 print(my_car.stop())
 
+class Vehicle:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def start_engine1(self):
+        return "The engine is running!"
+
+# child class
+class Car(Vehicle):
+    def start_engine(self):
+        return super().start_engine1() + " It's a car engine."
+
+# instance 생성
+my_car = Car("Toyota", "Corolla", 2009)
+
+# method 호출
+print(my_car.start_engine())

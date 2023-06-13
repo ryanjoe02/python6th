@@ -252,3 +252,20 @@
 
     you don't need to define the function explicitly
 
+## 06월 13일
+
+- LeetCode
+
+  - ```import re``` : RegEx
+    ```
+    s = Hello!234
+    re.sub(’[^a-z0-9]’,’’,s) #Output : Hello234
+    ```
+    - [^a-z0-9] : matches any character that is not a lowercase alphabet or a digit.
+    - '' : It will be replaced with an empty string. 
+
+
+- Tim Sort
+
+  Tim Sort is a hybrid sorting algorithm derived from ```merge sort``` and ```insertion sort```.
+

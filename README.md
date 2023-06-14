@@ -269,3 +269,19 @@
 
   Tim Sort is a hybrid sorting algorithm derived from ```merge sort``` and ```insertion sort```.
 
+## 06/14
+
+- Deque (Data Ended Queue) + module ```collections```
+
+    ![Alt text](https://media.geeksforgeeks.org/wp-content/uploads/anod.png)
+
+    As Deque provides an ```O(1) time complexity``` for append and pop operations as compared to a list that provides O(n) time complexity.
+
+
+- Linked List
+
+    ![Alt text](https://media.geeksforgeeks.org/wp-content/uploads/20220712172013/Singlelinkedlist.png)
+
+    Linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. So, They are linked using ```pointers```. 
+
+- 

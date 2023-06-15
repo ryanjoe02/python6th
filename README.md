@@ -289,8 +289,8 @@
 
 - Stack & Queue
 
-    stack : Last in first out (설거지 접시, 마지막으로 설거지한 접시를 먼저 닦는다)
-    queue : first in first out (줄서기), .pop(0) 이건 O(n)이므로 deque를 사용하여 좀 더 좋은 성능을 발현할 수 있음
+    - stack : Last in first out (설거지 접시, 마지막으로 설거지한 접시를 먼저 닦는다)
+    - queue : first in first out (줄서기), .pop(0) 이건 O(n)이므로 deque를 사용하여 좀 더 좋은 성능을 발현할 수 있음
 
 - BeautifulSoup
 

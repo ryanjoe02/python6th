@@ -284,4 +284,39 @@
 
     Linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. So, They are linked using ```pointers```. 
 
-- 
+
+## 06/15
+
+- Stack & Queue
+
+    stack : Last in first out (설거지 접시, 마지막으로 설거지한 접시를 먼저 닦는다)
+    queue : first in first out (줄서기), .pop(0) 이건 O(n)이므로 deque를 사용하여 좀 더 좋은 성능을 발현할 수 있음
+
+- BeautifulSoup
+
+    Makes it easy to scrape information from web pages (html, xml).
+
+    
+
+- API (weather)
+
+    - JSON (JavaScript Object Notation)
+
+- Mail
+
+    - ```SMTP``` (simple mail transport protocol) : This protocol is  mainly used by the clients to send email to the server.
+
+        STMP is for sending data.
+    
+        - SMTP_SSL : A secure version of the SMTP protocol that uses the Secure Sockets Layer (SSL) to encrypt data in transit.
+
+    
+    - ```IMAP``` (Internet Message Access Protocol) : Thie client connects to the server, checks for new message, and saves them in the cache as temporary files.
+
+        Retrieving messages
+
+    - ```MIME``` : It allows the users to exchange pictures, audio, vido, and document files in email.
+
+        MIME형식으로 변경 -> SMTP가 알아 듣는다
+
+    - Regular Express

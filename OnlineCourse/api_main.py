@@ -1,7 +1,7 @@
 import requests
 import json
 
-apikey = "7f0c2e2329f886556fc99b93d61a7372"
+apikey = "#######################"
 lat = 37.53
 lon = 127.02
 api = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apikey}&units=metric"

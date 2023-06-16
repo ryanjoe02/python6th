@@ -42,9 +42,15 @@ article {
 .result-message {
     color: lightslategray;
     margin: 0 auto;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 100;
 }
+
+.result-animal {
+    font-size: 30px;
+    font-weight: normal;
+}
+
 .result-explain {
     font-size: 20px;
     font-weight: normal;

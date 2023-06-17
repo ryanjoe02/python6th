@@ -320,3 +320,11 @@
         MIME형식으로 변경 -> SMTP가 알아 듣는다
 
     - Regular Express
+
+## 06/16
+
+- MBTI 사이트 만들기
+
+    CSS, HTML reviewed
+
+- DSA - leetcode

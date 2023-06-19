@@ -328,3 +328,9 @@
     CSS, HTML reviewed
 
 - DSA - leetcode
+
+## 06/19
+
+- Graph practice
+
+- 

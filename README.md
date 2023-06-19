@@ -333,4 +333,4 @@
 
 - Graph practice
 
-- Django basic practice
+- Django basic practice (Server)

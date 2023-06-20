@@ -25,12 +25,16 @@ SECRET_KEY = 'django-insecure-e$89n%6jfk&u$h2pt*@s*wb6$3pfa_%avf%3ahf0(+^k+g^m=s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost', '127.0.0.1'
+    # 공유기 주소도 추가하기
+]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -105,7 +109,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# 'UTC' - Standard time zone
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 

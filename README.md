@@ -380,3 +380,7 @@
 - iTerm (shortcut)
     
     ```Cmd + ]``` and ```Cmd + [``` navigates among split panes in order of use.
+
+## 06/21
+
+- 

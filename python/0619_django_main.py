@@ -55,7 +55,7 @@ if __name__ == '__main__':
 # 이미지 다운로드 실습
 
 def download_image(url, data):
-    download_dir = Path("DOWNLOAD")
+    download_dir = Path("python6th/DOWNLOAD")
     download_dir.mkdir(exist_ok=True)
     
     parser = ImageParser()

@@ -344,30 +344,31 @@
 
 - Django Web framework
 
-    dictionary 는 key & value 를 ```mapping``` 한다.
+    - dictionary 는 key & value 를 ```mapping``` 한다.
     
-    Cache System : 중요
+    - Cache System : 중요
 
-    Model CRUD : Create Read Update Delete 
+    - Model CRUD : Create Read Update Delete 
 
-    PostgreSQL로 많이 넘어오는 추세
+    - PostgreSQL로 많이 넘어오는 추세
 
-    Settings.py & urls.py
+    - Settings.py & urls.py
 
-    Polls app (투표기능이 있는 Web Service)
-    ```
-    python manage.py startapp polls
-    ```
+    - Polls app (투표기능이 있는 Web Service)
+        ```
+        python manage.py startapp polls
+        ```
 
-    ```
-    python manage.py migrate
-    ```
-    -> made ```db.sqlite3``` : 저장된 "코드"들을 파일로 만들어 준다 
-    
-    It's also called : ```local db```
+    - migrate
+        ```
+        python manage.py migrate
+        ```
+        -> made ```db.sqlite3``` : 저장된 "코드"들을 파일로 만들어 준다 
+        
+        It's also called : ```local db```
 
+        makemigrations 을 하고 migrate를 이용하여 ```models.py```파일을 확인하고 database파일(db.sqlite3)을 수정한다
 
-    makemigrations 을 하고 migrate 를 이용하여 db파일을 수정한다
 
 - Change Python Environment in VScode
 
@@ -376,3 +377,6 @@
     2. Select the Python version (conda, venv, etc)
     
 
+- iTerm (shortcut)
+    
+    ```Cmd + ]``` and ```Cmd + [``` navigates among split panes in order of use.

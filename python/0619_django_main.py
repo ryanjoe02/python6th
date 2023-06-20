@@ -15,6 +15,7 @@ html = response.read()
 #print(html)
 
 #--------------------------------------------------------
+# 이미지 경로 추출
 
 class ImageParser(HTMLParser):
     def __init__(self):
@@ -36,6 +37,22 @@ def parse_image(data):
     parser.feed(data)
     dataSet = set(x for x in parser.result)
     return dataSet
+
+def main():
+    url = 'https://google.co.kr'
+    with urlopen(url) as f:
+        charset = f.headers.get_params('charset')[1][1]
+        data = f.read().decode(charset)
+
+    data_set = parse_image(data)
+    print('\n>>>>> Fetch Images from', url)
+    print('\n'.join(sorted(data_set)))
+
+if __name__ == '__main__':
+    main()
+
+#--------------------------------------------------------
+# 이미지 다운로드 실습
 
 def download_image(url, data):
     download_dir = Path("DOWNLOAD")
@@ -71,15 +88,12 @@ def main():
     print("\n>>>>>>>> Downloading...", host)
     url = urlunparse(('http', host, '', '', '', ''))
 
-    data_set = parse_image(data)
-    print("\n>>>>> Fatch Images from ", url)
-    print("\n".join(sorted(data_set)))
     download_image(url, data)
 
 if __name__ == '__main__':
     main()
 
-
+#--------------------------------------------------------
 # 코드로 웹 서버를 띄우는 실습 (수동으로)
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -96,6 +110,7 @@ server = HTTPServer(("",8080), SimpleHTTPRequestHandler)
 server.serve_forever()
 
 #--------------------------------------------------------
+# wsgiref module
 
 from wsgiref.simple_server import make_server
 

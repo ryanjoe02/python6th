@@ -12,8 +12,9 @@ request = urllib.request.Request(url)
 response = urllib.request.urlopen(request)
 
 html = response.read()
-
 #print(html)
+
+#--------------------------------------------------------
 
 class ImageParser(HTMLParser):
     def __init__(self):
@@ -69,7 +70,6 @@ def main():
 
     print("\n>>>>>>>> Downloading...", host)
     url = urlunparse(('http', host, '', '', '', ''))
-    #--------------------------------------------
 
     data_set = parse_image(data)
     print("\n>>>>> Fatch Images from ", url)
@@ -78,7 +78,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
 
 
 # 코드로 웹 서버를 띄우는 실습 (수동으로)

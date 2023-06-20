@@ -334,3 +334,23 @@
 - Graph practice
 
 - Django basic practice (Server)
+
+## 06/20
+
+- Graph Algorithm (LeetCode)
+
+    - Dijkstra's algorithm
+
+
+- Django Web framework
+
+    dictionary 는 key & value 를 ```mapping``` 한다.
+    
+    Cache System : 중요
+
+    Model CRUD : Create Read Update Delete 
+
+    PostgreSQL로 많이 넘어오는 추세
+
+    
+

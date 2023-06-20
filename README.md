@@ -352,5 +352,27 @@
 
     PostgreSQL로 많이 넘어오는 추세
 
+    Settings.py & urls.py
+
+    Polls app (투표기능이 있는 Web Service)
+    ```
+    python manage.py startapp polls
+    ```
+
+    ```
+    python manage.py migrate
+    ```
+    -> made ```db.sqlite3``` : 저장된 "코드"들을 파일로 만들어 준다 
+    
+    It's also called : ```local db```
+
+
+    makemigrations 을 하고 migrate 를 이용하여 db파일을 수정한다
+
+- Change Python Environment in VScode
+
+    1. open the Command Palette (```⇧⌘P```)
+
+    2. Select the Python version (conda, venv, etc)
     
 

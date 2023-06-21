@@ -383,4 +383,13 @@
 
 ## 06/21
 
-- 
+- CS 탐구생활 2
+
+    - OS operator
+
+    - Page Replacement Algorithm
+
+- Django polls
+
+## 06/22
+

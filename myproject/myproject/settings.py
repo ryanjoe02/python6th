@@ -123,20 +123,19 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
-        'console': {
-            'format': '%(asctime)s %(levelname)s %(message)s',
+        'verbose': {
+            'format': '[%(asctime)s] [%(levelname)s] %(message)s',
+            'datefmt': '%d/%b/%Y %H:%M:%S'
         }
     },
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
-            'formatter': 'console'
+            'formatter': 'verbose'
         }
     },
-    'loggers': {
-        'django': {
-            'level': 'DEBUG',
-            'handlers': ['console']
-        }
+    'root': {
+        'level': 'INFO',
+        'handlers': ['console']
     }
 }

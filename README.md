@@ -428,11 +428,20 @@
         {{value|striptags|safe}}
         ```
 
-- ```csrf```
+- ```CSRF```
 
     ```
     <input type="hidden" name="csrfmiddlewaretoken" value="Ckc3D24q76mGQ2pQrfIyxMjBEIec6j11ermhTcwYWaSsW7PiPRpUYSEqLq6pvXvd">
     ```
 
-    {csrf toekn} value 토큰을 만들어 주어 위변조 방지 (보안) 좀 더 검색
+    {csrf toekn} : used to enhance the security of a web application, preventing
 
+    1. Web Applications provide a CSRF token to each user to vertify.
+
+    2. All requests from the user must include this token.
+
+    3. The server checks the CSRF token to validate if it matches the request.
+
+## 06/23
+
+- 

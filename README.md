@@ -389,7 +389,14 @@
 
     - Page Replacement Algorithm
 
-- Django polls
+- Django polls -> myproject
 
 ## 06/22
 
+- Algorithm
+
+    - [Heap](https://leetcode.com/explore/learn/card/heap/)
+
+    - Height of Tree  : ```O(log(n))```
+
+    - Django -> myproject

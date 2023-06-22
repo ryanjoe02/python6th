@@ -391,6 +391,7 @@
 
 - Django polls -> myproject
 
+
 ## 06/22
 
 - Algorithm
@@ -400,3 +401,38 @@
     - Height of Tree  : ```O(log(n))```
 
     - Django -> myproject
+    
+        - tempalte inheritence
+
+        - django <form> tag :  데이터를 사용자로부터 수집하고 서버로 전송하는 데 사용할 수 있는 도구 
+
+        - logging
+
+- views.py & index.html 에서 실습 
+
+    -   ```values``` is located in views.py
+        ```
+        def index(request):
+            latest_question_list = Question.objects.all().order_by('-pub_date')[:5]
+            context = {'latest_question_list': latest_question_list, 'value': '<strong>hello, world</strong>'}
+            return render(request, 'polls/index.html', context)
+        ```
+    - Practice in index.html after modifiying values
+        ```
+        {{value|lower}}{#values="Hello World #}
+        {{value|escape|linebreaks}}{#values="Hello\n World!#}
+        {{value|truncatewords:3}}{#values="동해물과 백두산이 마르고 닳도록 하느님이 #}
+        {{value|join:' // '}}{# values=['1', '2', '3'] #}
+        {{value|default:"nothing"}}{# when value is NONE, it's printed #}
+        {{value|safe}}
+        {{value|striptags|safe}}
+        ```
+
+- ```csrf```
+
+    ```
+    <input type="hidden" name="csrfmiddlewaretoken" value="Ckc3D24q76mGQ2pQrfIyxMjBEIec6j11ermhTcwYWaSsW7PiPRpUYSEqLq6pvXvd">
+    ```
+
+    {csrf toekn} value 토큰을 만들어 주어 위변조 방지 (보안) 좀 더 검색
+

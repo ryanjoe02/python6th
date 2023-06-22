@@ -1,4 +1,4 @@
-# Terminal practice 06/22
+# Shell practice 06/22
 
 ## admin 사이트 안에 question 부분에 "what's new?" 추가하기
 ```
@@ -40,7 +40,7 @@ q #output: <Question: 테스트 질문입니다.>
 Question.objects.filter(id=5)
 #output: <QuerySet []>
 ```
-## double underscore (```__startswith``` and ```__year```, etc)
+## Double underscore (```__startswith``` and ```__year```, etc)
 ```
 Question.objects.filter(question_text__startswith='what')
 #output: <QuerySet [<Question: What's up today?>]>
@@ -51,7 +51,9 @@ Question.objects.filter(pub_date__year=2022)
 Question.objects.filter(pub_date__year=2023)
 #output: <QuerySet [<Question: 테스트 질문입니다.>, <Question: 아무거나 넣어도 동작합니다.>, <Question: 네번째 질문입니다.>, <Question: What's up today?>, <Question: test>]>
 ```
-### ```choice_set```
+### choice_set 
+
+The ```reverse relation (역참조)``` on the Question model would be choice_set. It allows you <ins>to access all the related Choice objects</ins> for a particular Question object.
 ```
 q.choice_set.all()
 #output: <QuerySet [<Choice: 첫번째 선택지>, <Choice: 1>, <Choice: 2>]>

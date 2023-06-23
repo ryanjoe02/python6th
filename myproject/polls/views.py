@@ -6,6 +6,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from polls.models import Question, Choice
 
+# Create your views here.
 logger = logging.getLogger(__name__)
 
 class IndexView(generic.ListView):
@@ -15,17 +16,14 @@ class IndexView(generic.ListView):
         # 최근 생성된 질문 5개를 반환함
         return Question.objects.all().order_by('-pub_date')[:5]
 
-# Create your views here.
-def index(request):
-    latest_question_list = Question.objects.all().order_by('-pub_date')[:5]
-    context = {'latest_question_list': latest_question_list}
-    return render(request, 'polls/index.html', context)
+class DetailView(generic.DetailView):
+    model = Question
+    context_object_name = 'question'
+    template_name = 'polls/detail.html'
 
-
-def detail(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/detail.html', {'question': question})
-
+class ResultView(generic.DetailView):
+    model = Question
+    template_name = 'polls/results.html'
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
@@ -41,8 +39,3 @@ def vote(request, question_id):
         selected_choice.votes += 1
         selected_choice.save()
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
-
-
-def results(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    return render(request, 'polls/results.html', {'question': question})

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+<title>{% block title %}Polls Application Site{% endblock title %}</title>
+
+{% block sidebar %}
+    {{ block.super }}{# block.html에서 상속 받아온다. project home & admin을 불러옴 #}
+    <ul>
+        <li><a href="/polls/">Polls Home</a></li>
+    </ul>
+{% endblock sidebar %}

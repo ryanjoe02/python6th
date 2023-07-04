@@ -1,8 +1,10 @@
 # Python 6th
 
+---
 ## 5월 26일
 
 - CSS 실습
+---
 ## 5월 30일
 
 - Operator JS
@@ -33,7 +35,7 @@
     The C++ Programming Language book
 
 - Operator System
-
+---
 ## 5월 31일
 
 - do - while Statement VS while Statement
@@ -70,7 +72,7 @@
             
         Created a new object and assigns it to the variable ```myCar```. This object whill have the ```values``` (2023, Tesla, Model 3).
 
-
+---
 ## 06월 01일 - 02일
 
 - Bootstrip
@@ -182,7 +184,7 @@
 
     - The binding of this : this와 this가 가리키는 객체를 ```binding```하는 것이다
 
-
+---
 ## 6월 5일
 
 - Implicit
@@ -201,7 +203,7 @@
     b = int(a) #Output : 123
     ```
     Explicit type conversion is when you ```manually convert``` a value from one data type to another using a built-in function.
-
+---
 ## Python OOP
 
 - self
@@ -251,7 +253,7 @@
     one-line functions, easy to read and understand
 
     you don't need to define the function explicitly
-
+---
 ## 06월 13일
 
 - LeetCode
@@ -268,7 +270,7 @@
 - Tim Sort
 
   Tim Sort is a hybrid sorting algorithm derived from ```merge sort``` and ```insertion sort```.
-
+---
 ## 06/14
 
 - Deque (Data Ended Queue) + module ```collections```
@@ -284,7 +286,7 @@
 
     Linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. So, They are linked using ```pointers```. 
 
-
+---
 ## 06/15
 
 - Stack & Queue
@@ -320,7 +322,7 @@
         MIME형식으로 변경 -> SMTP가 알아 듣는다
 
     - Regular Express
-
+---
 ## 06/16
 
 - MBTI 사이트 만들기
@@ -328,13 +330,13 @@
     CSS, HTML reviewed
 
 - DSA - leetcode
-
+---
 ## 06/19
 
 - Graph practice
 
 - Django basic practice (Server)
-
+---
 ## 06/20
 
 - Graph Algorithm (LeetCode)
@@ -380,7 +382,7 @@
 - iTerm (shortcut)
     
     ```Cmd + ]``` and ```Cmd + [``` navigates among split panes in order of use.
-
+---
 ## 06/21
 
 - CS 탐구생활 2
@@ -391,7 +393,7 @@
 
 - Django polls -> myproject
 
-
+---
 ## 06/22
 
 - Algorithm
@@ -442,6 +444,3 @@
 
     3. The server checks the CSRF token to validate if it matches the request.
 
-## 06/23
-
-- 

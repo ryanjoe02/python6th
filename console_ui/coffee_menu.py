@@ -7,6 +7,7 @@ coffee_menu = {
 
 total_price = 0
 
+
 def print_menu():
     print("\n=== coffee ordering system ===")
     for id, coffee in coffee_menu.items():

@@ -22,77 +22,6 @@
       to avoid connecting the SDK to running emulators.
     -->
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-        body {
-            background: #ECEFF1;
-            color: rgba(0, 0, 0, 0.87);
-            font-family: Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        #message {
-            background: white;
-            max-width: 360px;
-            margin: 100px auto 16px;
-            padding: 32px 24px;
-            border-radius: 3px;
-        }
-
-        #message h2 {
-            color: #ffa100;
-            font-weight: bold;
-            font-size: 16px;
-            margin: 0 0 8px;
-        }
-
-        #message h1 {
-            font-size: 22px;
-            font-weight: 300;
-            color: rgba(0, 0, 0, 0.6);
-            margin: 0 0 16px;
-        }
-
-        #message p {
-            line-height: 140%;
-            margin: 16px 0 24px;
-            font-size: 14px;
-        }
-
-        #message a {
-            display: block;
-            text-align: center;
-            background: #039be5;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: white;
-            padding: 16px;
-            border-radius: 4px;
-        }
-
-        #message, #message a {
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-        }
-
-        #load {
-            color: rgba(0, 0, 0, 0.4);
-            text-align: center;
-            font-size: 13px;
-        }
-
-        @media (max-width: 600px) {
-            body, #message {
-                margin-top: 0;
-                background: white;
-                box-shadow: none;
-            }
-
-            body {
-                border-top: 16px solid #ffa100;
-            }
-        }
-    </style>
 </head>
 <body>
 <div id="nologin">
@@ -112,47 +41,38 @@
 <div id="loggedIn" style="display: none">
     <button onclick="logout()">로그아웃</button>
 </div>
-
+<div class="container">
+    <ul id="book-list">
+    </ul>
+</div>
 
 <script>
     document.addEventListener('DOMContentLoaded', async function () {
-        const loadEl = document.querySelector('#load');
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        // 데이터 가져오기
+        // async 컬랙션 호출 구문
         const fulfilled = await firebase.firestore().collection('books').orderBy('title').get();
         console.log('1', fulfilled.docs.map(d => d.data().title));
 
-        // collections 불러오기 위와 같은 구문
+        // 컬랙션 콜백 호출 구문 위와 동일
         firebase.firestore().collection('books').orderBy('title').get().then((fulfilled) => {
             console.log('2', fulfilled.docs.map(d => d.data().title));
         })
 
 
-        // 자동으로 collections에 새로운 데이터가 추가되면 데이터 갱신해줌
+        // 자동으로 새로운 데이터를 갱신해줌 onSnapshot
         firebase.firestore().collection('books').orderBy('title').onSnapshot((fulfilled) => {
-            console.log('3', fulfilled.docs.map(d => d.data().title));
+            console.log('snapshot', fulfilled.docs.map(d => d.data().title));
+            const ulElement = document.getElementById('book-list')
+            fulfilled.docs.forEach(d => {
+                const checkElement = document.getElementById(d.id);
+                if (!checkElement) {
+                    const liElement = document.createElement('li');
+                    liElement.id = d.id;
+                    liElement.textContent = d.data().title;
+                    ulElement.appendChild(liElement);
+                }
+            })
         })
-
-
-
-
-
-
 
         // 회원 인증시 이벤트 처리
         firebase.auth().onAuthStateChanged(function (user) {
@@ -211,10 +131,14 @@
         const loginPassword = document.getElementById('login-password');
 
         loginForm.addEventListener('submit', async (e) => {
-            e.preventDefault()
+            e.preventDefault();
             const email = loginEmail.value;
             const password = loginPassword.value;
-            await firebase.auth().signInWithEmailAndPassword(email, password);
+            try {
+                await firebase.auth().signInWithEmailAndPassword(email, password);
+            } catch (e) {
+                console.log(e);
+            }
         });
 
     });

@@ -24,7 +24,7 @@
     <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 </head>
 <body>
-<div id="nologin">
+<div id="nologin" style="display: none;">
     <h1>로그인</h1>
     <form id="login-form">
         <input type="email" id="login-email" placeholder="이메일">
@@ -41,6 +41,15 @@
 <div id="loggedIn" style="display: none">
     <button onclick="logout()">로그아웃</button>
 </div>
+<div>
+    <h1>파일 업로드</h1>
+    <form id="file-form">
+        <input type="file" id="file-input">
+        <input type="submit" value="등록">
+    </form>
+</div>
+
+
 <div class="container">
     <div style="margin: 10px;">
         <form id="book-form">
@@ -51,37 +60,39 @@
     <ul id="book-list" style="max-height: 400px; overflow-y: scroll; display: flex; flex-direction: column-reverse;">
     </ul>
 </div>
-<div>
-    <h1>파일 업로드</h1>
-    <form id="file-form">
-        <input type="file" id="file-input">
-        <input type="submit" value="Submit">
-    </form>
-</div>
 
 <script>
     document.addEventListener('DOMContentLoaded', async function () {
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
         // 파일 업로드
         const fileForm = document.getElementById('file-form');
-        const fileInput = document.getElementById('file-input');
+        const fileInput = document.getElementById('file-input')
         fileForm.addEventListener('submit', async function (e) {
             e.preventDefault();
             console.log('파일 업로드', fileInput);
             const file = fileInput.files[0]
             if (!file) return;
-            console.log('진행')
-
+            console.log('진행');
             try {
                 const storageRef = firebase.storage().ref('images');
+                console.log('storageRef', storageRef);
                 const snapshot = await storageRef.child(file.name).put(file);
-                console.log('업로드 완료!')
+                console.log('업로드 완료!');
                 const url = await snapshot.ref.getDownloadURL();
-                console.log('이미지 URL: ', url)
+                console.log('이미지 URL:', url);
+                const docRef = firebase.firestore().collection('books').doc();
+                await docRef.set({
+                    title: bookTitle.value,
+                    url: url,
+                    userId: firebase.auth().currentUser.uid,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                });
             } catch (e) {
                 console.log(e);
             }
-        })
+
+        });
+
 
         // async 컬랙션 호출 구문
         const fulfilled = await firebase.firestore().collection('books').orderBy('title').get();
@@ -103,6 +114,12 @@
                     const liElement = document.createElement('li');
                     liElement.id = d.id;
                     liElement.textContent = d.data().title;
+                    if (d.data().url) {
+                        const imgElement = document.createElement('img')
+                        imgElement.src = d.data().url
+                        liElement.appendChild(imgElement)
+                    }
+
                     ulElement.appendChild(liElement);
                 }
             })
@@ -137,22 +154,6 @@
                 logoutComponent.style.display = 'none';
             }
         })
-
-        // 페이지 로딩시 인증여부 확인
-        if (firebase.auth().currentUser) {
-            // 인증회원
-            console.log('로그인 되었습니다.')
-            const loginComponent = document.getElementById('nologin');
-            const logoutComponent = document.getElementById('loggedIn');
-            loginComponent.style.display = 'none';
-            logoutComponent.style.display = null;
-        } else {
-            console.log('로그인이 필요합니다.')
-            const loginComponent = document.getElementById('nologin');
-            const logoutComponent = document.getElementById('loggedIn');
-            loginComponent.style.display = null;
-            logoutComponent.style.display = 'none';
-        }
 
         // 회원가입
         const signupForm = document.getElementById('signup-form');

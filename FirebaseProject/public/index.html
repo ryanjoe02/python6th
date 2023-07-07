@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to Firebase Hosting</title>
 
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
-
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/9.23.0/firebase-app-compat.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -115,8 +112,10 @@
 <div id="loggedIn" style="display: none">
     <button onclick="logout()">로그아웃</button>
 </div>
+
+
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', async function () {
         const loadEl = document.querySelector('#load');
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
         // // The Firebase SDK is initialized and available here!
@@ -133,6 +132,27 @@
         // firebase.performance(); // call to activate
         //
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        // 데이터 가져오기
+        const fulfilled = await firebase.firestore().collection('books').orderBy('title').get();
+        console.log('1', fulfilled.docs.map(d => d.data().title));
+
+        // collections 불러오기 위와 같은 구문
+        firebase.firestore().collection('books').orderBy('title').get().then((fulfilled) => {
+            console.log('2', fulfilled.docs.map(d => d.data().title));
+        })
+
+
+        // 자동으로 collections에 새로운 데이터가 추가되면 데이터 갱신해줌
+        firebase.firestore().collection('books').orderBy('title').onSnapshot((fulfilled) => {
+            console.log('3', fulfilled.docs.map(d => d.data().title));
+        })
+
+
+
+
+
+
 
         // 회원 인증시 이벤트 처리
         firebase.auth().onAuthStateChanged(function (user) {

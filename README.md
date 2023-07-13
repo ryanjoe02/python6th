@@ -25,6 +25,8 @@
 
 - Understand the basics of Django framework (Polls, Books)
 
+- 파이썬 웹 프로그래밍 (실전편)
+
 5. [online_course](https://github.com/ryanjoe02/python6th/tree/main/online_course)
 
 - Understanding what is ```API```

@@ -1,5 +1,48 @@
 # Python 6th
 
+## Menu
+
+0. [console_ui](https://github.com/ryanjoe02/python6th/tree/main/console_ui)
+
+- Made a coffee menu - ```console-menu```
+
+- And then, made a [book management](https://github.com/likelion-backend-6th/PythonProject_SeongyeolJoe) - ```console-menu```
+
+1. [FirebaseProject](https://github.com/ryanjoe02/python6th/tree/main/FirebaseProject)
+    
+- Understanding the concepts of code comparison in Django -> ```auth (login/logout)```
+
+2. [HTML_CSS_practice](https://github.com/ryanjoe02/python6th/tree/main/HTML_CSS_practice)
+
+- Understanding the basics of HTML and CSS code before learning Django
+
+3. [Mbti_Test](https://github.com/ryanjoe02/python6th/tree/main/mbti_test)
+
+- Made an Mbit test program with animal pictures in an online course
+
+
+4. [myproject](https://github.com/ryanjoe02/python6th/tree/main/myproject)
+
+- Understand the basics of Django framework (Polls, Books)
+
+5. [online_course](https://github.com/ryanjoe02/python6th/tree/main/online_course)
+
+- Understanding what is ```API```
+
+- Sending an email automatically in Python code
+
+6. [python](https://github.com/ryanjoe02/python6th/tree/main/python)
+
+- Understanding the ```basics of Python & OOP concepts```
+
+- Data Structure and Algorithm in python written by Michael T.Goodrich
+
+7. [to_do_list](https://github.com/ryanjoe02/python6th/tree/main/to_do_list)
+
+-  It is to-do list based on bootstrap
+
+
+---
 ---
 ## 5월 26일
 
